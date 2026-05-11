@@ -213,8 +213,8 @@ Every study session gets logged in `progress/daily-log.md` using this format:
 
 Building in public. Open to feedback, suggestions, and connections in the PH data community.
 
-- LinkedIn: *[your LinkedIn URL]*
-- Email: *[your email]*
+- LinkedIn: *[Heidel Medina](https://www.linkedin.com/in/heidel-medina/)*
+- Email: *heidelparreno18@gmail.com*
 
 ---
 
