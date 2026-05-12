@@ -24,9 +24,27 @@ I'm transitioning into the dev industry from a background in multimedia, writing
 The goal of Phase 1 is to build solid fundamentals before touching any analytics library or visualization tool. No shortcuts — get the core right first.
 
 **What I'm learning:**
-- Python core for data work — dictionaries, list comprehensions, file I/O, CSV handling
-- SQL from the ground up — SELECT, WHERE, GROUP BY, aggregates, JOINs, CASE WHEN
-- Excel for analysts — Pivot Tables, XLOOKUP, data cleaning basics
+
+*Python (expanded — starting from scratch via Kaggle):*
+- Kaggle Python Course: syntax basics, variables, data types, functions, conditionals, loops
+- Strings and lists — indexing, slicing, built-in methods
+- Dictionaries and sets — when and why to use them
+- List comprehensions — writing clean, Pythonic code
+- File I/O — reading and writing `.txt` and `.csv` files with `open()` and the `csv` module
+- Working with external data — loading files, iterating rows, basic transformations
+- Writing reusable functions and simple scripts
+
+*SQL (from the ground up):*
+- SELECT, WHERE, ORDER BY, LIMIT
+- GROUP BY and aggregate functions — COUNT, SUM, AVG, MIN, MAX
+- JOINs — INNER, LEFT, and when to use each
+- CASE WHEN for conditional logic
+- Filtering with HAVING
+
+*Excel (analyst basics):*
+- Pivot Tables and Pivot Charts
+- XLOOKUP and VLOOKUP
+- Data cleaning — removing duplicates, handling blanks, text functions
 
 **Projects:**
 - `subtitle-analyzer/` — Python script that reads .srt files and analyzes word frequency
@@ -40,17 +58,6 @@ The goal of Phase 1 is to build solid fundamentals before touching any analytics
 - [freeCodeCamp Data Analysis with Python](https://www.freecodecamp.org/learn/data-analysis-with-python/) — Pandas + NumPy projects
 - [LeetCode SQL](https://leetcode.com/problemset/database/) — interview-level SQL practice
 - [Alex The Analyst (YouTube)](https://www.youtube.com/@AlexTheAnalyst) — Excel, SQL, Python walkthroughs
-
-**Weekly schedule:**
-| Day | Focus | Sessions |
-|---|---|---|
-| Monday | Python | AM: concepts · PM: build scripts |
-| Tuesday | SQL Core | AM: lessons · PM: SQLBolt/SQLZoo |
-| Wednesday | Build Day | PM only: debug, projects, GitHub |
-| Thursday | Tech Scan | Async: newsletters, blogs, GitHub trending |
-| Friday | SQL + Excel | AM: JOINs, CASE WHEN, Pivot · PM: dashboards |
-| Saturday | Deep Work | AM 7:30–10:30: portfolio projects |
-| Sunday | Flex/Review | PM: LeetCode SQL or rest |
 
 ---
 
