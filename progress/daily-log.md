@@ -1,3 +1,17 @@
+## 2026-05-13 · Day 3 · Week 1 · Phase 1
+
+**Session:** AM 
+**Hours:** 2
+**Mood:** 3/5  
+
+**Topics:** Functions, built-in functions, docstrings, help() function
+
+**Built:** Studies how these topics work, how to use them, and how documentation works in a introductory and professional level.
+
+**Blockers:** Sleep deprivation. 
+
+---
+
 ## 2026-05-12 · Day 2 · Week 1 · Phase 1
 
 **Session:** AM 
