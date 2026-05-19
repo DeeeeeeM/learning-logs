@@ -1,15 +1,17 @@
-# Variables representing the number of candies collected by alice, bob, and carol
-alice_candies = 121
-bob_candies = 77
-carol_candies = 109
-
-# Your code goes here! Replace the right-hand side of this assignment with an expression
-# involving alice_candies, bob_candies, and carol_candies
-
-candies = [alice_candies, bob_candies, carol_candies]
-result_candies = sum(candies)
-
-result = (alice_candies + bob_candies + carol_candies) % 3
-to_smash = result
-
-print(to_smash)
+def bmi_category(weight_kg, height_m):
+    
+    bmi = weight_kg / (height_m ** 2)
+    
+    if bmi < 18.5:
+        return "Underweight"
+    elif bmi >= 18.5 and bmi <= 24.9:
+        return "Normal"
+    elif bmi >= 25 and bmi <= 29.9:
+        return "Overweight"
+    elif bmi >= 30:
+        return "Obese"
+    
+print(bmi_category(50, 1.7))   # "Underweight"
+print(bmi_category(70, 1.7))   # "Normal"
+print(bmi_category(85, 1.7))   # "Overweight"
+print(bmi_category(100, 1.7))  # "Obese"
