@@ -1,12 +1,33 @@
 ## 2026-05-19 · Day 4 · Week 2 · Phase 1
 
+**Session:** PM
+**Hours:** 3
+**Mood:** 4/5  
+
+**Topics:** Advanced Boolean and Conditionals
+
+**Built:** Dove deep into Tuples and Lists. 
+- Re-studied some basic syntax 
+- Added a few useful syntax such as:
+  - searching lists 
+  - useful functions (sorted, len, min, max)
+  - And about proper indexing. 
+
+Also added some important terms about Objects, Methods, and Attributes.
+
+**Blockers:** Notifications. 
+
+---
+
+## 2026-05-19 · Day 4 · Week 2 · Phase 1
+
 **Session:** AM 
 **Hours:** 3
 **Mood:** 3/5  
 
 **Topics:** Advanced Boolean and Conditionals
 
-**Built:** Faimliarizes how to use if, else, elif, conditionals and bool inside functions using return.
+**Built:** Familiarizes how to use if, else, elif, conditionals and bool inside functions using return.
 
 **Blockers:** Work distractions. 
 
