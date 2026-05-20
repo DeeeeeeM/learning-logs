@@ -1,3 +1,18 @@
+## 2026-05-19 · Day 5 · Week 2 · Phase 1
+
+**Session:** PM
+**Hours:** 1
+**Mood:** 3/5  
+
+**Topics:** Lists test
+
+**Built:** 
+Added the test from the previous topic
+
+**Blockers:** . 
+
+---
+
 ## 2026-05-19 · Day 4 · Week 2 · Phase 1
 
 **Session:** PM
