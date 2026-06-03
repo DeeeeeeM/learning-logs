@@ -1,3 +1,19 @@
+## 2026-06-03 · Day 6 · Week 4 · Phase 1
+
+**Session:** PM
+**Hours:** 1
+**Mood:** 2/5  
+
+**Topics:** Lists test
+
+**Built:** 
+Learned more about loops in lists, how multi line loops with lists can be shortened and practiced a few common lists for loops to list comprehension 
+
+**Blockers:** 
+Felt ill for a couple of weeks and had personal commitments (work, house, health).
+
+---
+
 ## 2026-05-19 · Day 5 · Week 2 · Phase 1
 
 **Session:** PM
