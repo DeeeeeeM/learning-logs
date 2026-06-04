@@ -1,3 +1,19 @@
+## 2026-06-04 · Day 7 · Week 4 · Phase 1
+
+**Session:** PM
+**Hours:** 2
+**Mood:** 5/5  
+
+**Topics:** Loop Test for list comprehension
+
+**Built:** 
+Did the tests and got 3/4 correct except the monte carlo problem, the last problem was quite hard because the function was hidden in the question, got a few things correct but I did understand most of it. Will probably review the problem to understand it fully.
+
+**Blockers:** 
+Mental fatigue after work. 
+
+---
+
 ## 2026-06-03 · Day 6 · Week 4 · Phase 1
 
 **Session:** PM
