@@ -1,3 +1,19 @@
+## 2026-06-06 · Day 8 · Week 4 · Phase 1
+
+**Session:** PM
+**Hours:** 4
+**Mood:** 4/5  
+
+**Topics:** Strings and Dictionaries lesson and Test 
+
+**Built:** 
+Learned about different string manipulation techniques, dictionaries, different functions I can use for both strings and dicts.
+
+**Blockers:** 
+Mental Fatigue from yesterday and NBA Finals Game 2
+
+---
+
 ## 2026-06-04 · Day 7 · Week 4 · Phase 1
 
 **Session:** PM
