@@ -1,3 +1,19 @@
+## 2026-06-09 · Day 8 · Week 4 · Phase 1
+
+**Session:** AM/PM
+**Hours:** 4
+**Mood:** 3/5  
+
+**Topics:** Imports and Libraries + Test
+
+**Built:** 
+Learned how to use imports / libraries with type() dir() help(). Also finished Python Kaggle Course, will now move on to the next.
+
+**Blockers:** 
+Work commitments
+
+---
+
 ## 2026-06-06 · Day 8 · Week 4 · Phase 1
 
 **Session:** PM
