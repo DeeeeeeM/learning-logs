@@ -1,0 +1,77 @@
+Lesson 0: intro
+
+SQL, or Structured Query Language
+language designed to query, manipulate, and transform data from a relational database. 
+
+Relational databases
+represents a collection of related (two-dimensional) tables. Each of the tables are similar to an Excel spreadsheet, with a fixed number of named columns (the attributes or properties of the table) and any number of rows of data.
+
+Lesson 1: SELECT queries 
+
+To retrieve data from a SQL db, use SELECT statements.
+SELECT column, another_column, …
+FROM mytable;
+
+to retrieve all the columns of data from a table, use *
+SELECT * 
+FROM mytable;
+
+Excercise:
+
+SELECT * FROM movies;
+SELECT title FROM movies;
+SELECT title, director FROM movies;
+SELECT title, year FROM movies;
+
+Lesson 2: Queries with constraints
+
+To filter certain results from being returned, use WHERE
+
+SELECT column, another_column, …
+FROM mytable
+WHERE condition
+    AND/OR another_condition
+    AND/OR …;
+
++-------------------------+-------------------------------------------------------+--------------------------------------+
+| Operator                | Condition                                             | SQL Example                          |
++-------------------------+-------------------------------------------------------+--------------------------------------+
+| =, !=, <, <=, >, >=     | Standard numerical operators                          | col_name != 4                        |
+| BETWEEN ... AND ...     | Number is within range of two values (inclusive)      | col_name BETWEEN 1.5 AND 10.5        |
+| NOT BETWEEN ... AND ... | Number is not within range of two values (inclusive)  | col_name NOT BETWEEN 1 AND 10        |
+| IN (...)                | Number exists in a list                               | col_name IN (2, 4, 6)                |
+| NOT IN (...)            | Number does not exist in a list                       | col_name NOT IN (1, 3, 5)            |
++-------------------------+-------------------------------------------------------+--------------------------------------+
+
+Excercise:
+SELECT id FROM movies where id == 6;
+SELECT * FROM movies WHERE Year BETWEEN 2000 AND 2010;
+SELECT * FROM movies WHERE Year NOT BETWEEN 2000 AND 2010;
+SELECT * FROM movies WHERE id IN (1, 2, 3, 4, 5)
+
+
+Lesson 3: Queries with constraints (2)
+
+When writing WHERE clauses with columns containing text data, 
+SQL supports a number of useful operators to do things like case-insensitive string comparison and wildcard pattern matching. 
+
++----------------+------------------------------------------------------------------+---------------------------------------------------------------+
+| Operator       | Condition                                                        | Example                                                       |
++----------------+------------------------------------------------------------------+---------------------------------------------------------------+
+| =              | Case-sensitive exact string comparison                           | col_name = "abc"                                              |
+| != or <>       | Case-sensitive exact string inequality comparison                | col_name != "abcd"                                            |
+| LIKE           | Case-insensitive exact string comparison                         | col_name LIKE "ABC"                                           |
+| NOT LIKE       | Case-insensitive exact string inequality comparison              | col_name NOT LIKE "ABCD"                                      |
+| %              | Matches a sequence of zero or more characters                    | col_name LIKE "%AT%"                                          |
+|                | (used only with LIKE or NOT LIKE)                                | Matches "AT", "ATTIC", "CAT", or "BATS"                       |
+| _              | Matches a single character                                       | col_name LIKE "AN_"                                           |
+|                | (used only with LIKE or NOT LIKE)                                | Matches "AND", but not "AN"                                   |
+| IN (...)       | String exists in a list                                          | col_name IN ("A", "B", "C")                                   |
+| NOT IN (...)   | String does not exist in a list                                  | col_name NOT IN ("D", "E", "F")                               |
++----------------+------------------------------------------------------------------+---------------------------------------------------------------+
+
+Excercise
+SELECT * FROM movies WHERE Title LIKE "Toy Story%";
+SELECT * FROM movies WHERE Director = "John Lasseter";
+SELECT * FROM movies WHERE Director != "John Lasseter";
+SELECT * FROM movies WHERE Title LIKE "WALL-_";

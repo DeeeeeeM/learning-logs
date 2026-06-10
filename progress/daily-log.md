@@ -1,4 +1,21 @@
-## 2026-06-04 · Day 7 · Week 4 · Phase 1
+## 2026-06-10 · Day 8 · Week 5 · Phase 1
+
+**Session:** PM
+**Hours:** 1
+**Mood:** 2/5  
+
+**Topics:** Loop Test for list comprehension
+
+**Built:** 
+Started SQL lessons, learned about SQL's introduction definition, Select, Where queries, and queries with constraints. Studied Lessons 0 to 3
+
+**Blockers:** 
+Mental stress and fatigue due to work. 
+
+---
+
+
+## 2026-06-09 · Day 7 · Week 5 · Phase 1
 
 **Session:** PM
 **Hours:** 2
