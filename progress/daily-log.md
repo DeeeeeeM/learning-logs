@@ -1,4 +1,20 @@
-## 2026-06-04 · Day 7 · Week 4 · Phase 1
+## 2026-06-10 · Day 7 · Week 4 · Phase 1
+
+**Session:** PM
+**Hours:** 2
+**Mood:** 1/5  
+
+**Topics:** Select Where Query Constraints
+
+**Built:** 
+Learned lessons 0 to 3, Introduction to SQL, Select, Where, Query constraints and its different uses for different problems.
+
+**Blockers:** 
+Mental fatigue after work. 
+
+---
+
+# 2026-06-09 · Day 7 · Week 4 · Phase 1
 
 **Session:** PM
 **Hours:** 2
