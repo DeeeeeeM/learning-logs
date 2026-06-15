@@ -10,9 +10,20 @@ I'm transitioning into the dev industry from a background in multimedia, writing
 
 **Start date:** May 2026 
 **Target:** Junior Data Analyst role · 2027  
-**Next goal:** Software Engineer Foundations or Graduate school (Data / Research track)
+**Next goal:** Software Engineer Foundations, AI Automation Engineer, Data Science Role or Graduate school (Data / Research track)
 
 **Current phase:** 🔵 Phase 1 — Foundations
+
+---
+
+## 🗓️ Weekly Schedule
+
+| Days | Track | Focus |
+|---|---|---|
+| Tue – Sat | 📊 Data Analyst Roadmap | Phases 1–4 (see below) |
+| **Sun – Mon** | 🤖 AI Automation Track | Project-based learning — AI tools for repetitive tasks |
+
+The AI Automation track runs in parallel as a separate weekly project loop. Each weekend cycle = pick a repetitive task → automate it with AI → ship a small working tool.
 
 ---
 
@@ -147,6 +158,147 @@ Phase 4 is about converting skills into opportunities. The work done in Phases 1
 
 ---
 
+## 🤖 AI Automation Track (Sun–Mon, Parallel Track)
+
+**Schedule:** Sundays + Mondays, project-based loops
+**Focus:** Using AI (LLM APIs, agents, local models) to automate repetitive tasks — (Whisper, GPT translation pipelines, Gradio).
+
+This track runs independently of the Data Analyst phases above, organized into its own 4 phases. Each weekend cycle = one step forward on the current phase's project.
+
+**Current phase:** 🔵 AI-Phase 1 — Foundations
+
+---
+
+### 🔵 AI-Phase 1 — Python Automation + LLM API Foundations
+**Cycles 1–4 (≈ 4–8 weeks at Sun–Mon pace)**
+
+Goal: get comfortable calling LLM APIs reliably and structuring automation scripts. This phase is mainly about formalizing and documenting the patterns.
+
+**What to learn:**
+- Python automation basics — file I/O, `os`/`pathlib`, JSON/CSV handling, logging, `try/except` retry patterns
+- LLM API fundamentals — Messages/Chat Completions API shapes across providers, system prompts, structured JSON output, streaming
+- Multi-provider API usage — free tiers (Gemini, Groq, OpenRouter) vs. paid (OpenAI), and designing a common interface across them
+- Prompt engineering — clear instructions, examples, XML tags, chain-of-thought prompting
+- Rate limiting & retries — exponential backoff, jitter.
+- Scheduling — `cron` (or Windows Task Scheduler) for recurring runs
+
+**LLM API options (free-first approach):**
+- **Google Gemini API** — usable free tier (generous limits on `gemini-flash` models); good default for daily practice
+- **Groq API** — free tier, very fast inference on open models (Llama, Mixtral); good for agent loops with many calls
+- **OpenRouter** — one API key, multiple providers, includes free-tagged models (Llama, Gemini, DeepSeek variants); good for side-by-side comparisons
+- **OpenAI API** — pay-as-you-go, no ongoing free tier; reserve for final-quality checks on real `srt_translator.py` runs
+- **Ollama (local)** — zero cost, can start early even though it's the focus of AI-Phase 4
+
+**Resources:**
+- [Anthropic Academy — Claude 101 + Building with the Claude API](https://www.anthropic.com/learn) — free, official, covers Messages API, tool use, structured output, agentic patterns structured into three learning tracks for non-technical users, general Claude users, and developers building on the Claude API
+- [Anthropic's Prompt Engineering Interactive Tutorial](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview) — 9 chapters from basics to advanced, with hands-on exercises
+- [DeepLearning.AI short courses](https://www.deeplearning.ai/short-courses/) — 88 short courses, mostly GenAI-focused, 1–2 hours each with hands-on notebooks; start with "ChatGPT Prompt Engineering for Developers"
+- [Google AI Studio / Gemini API docs](https://ai.google.dev/) — free tier setup, rate limits, structured output (JSON mode)
+- [Groq API docs](https://console.groq.com/docs) — free tier setup, supported open models
+- [OpenRouter docs](https://openrouter.ai/docs) — unified API across providers, filtering for free models
+- OpenAI API docs (function/tool calling) 
+
+**Project: `prompt-toolkit/`**
+Steps:
+1. Build a small CLI/Gradio tool with a provider-agnostic interface: `call_llm(prompt, system, model, provider="gemini"/"groq"/"openrouter"/"openai")`, plus `call_llm_json(prompt, schema)` with retry + backoff
+2. Wire up at least 2 free providers (e.g., Gemini + Groq) and confirm both work through the same interface
+3. Add structured-output mode — force JSON responses matching a schema, validate with `pydantic`
+4. Add logging (requests, tokens, provider, errors, cost where applicable) to a CSV for usage tracking
+5. Run a small side-by-side test (same prompt, multiple providers) and note quality/speed differences
+6. Document the patterns in a README — this becomes the shared "library" other projects import from
+
+**Milestone:** A reusable, multi-provider `llm_utils.py` module (used by later projects) + documented prompt patterns + provider comparison notes.
+
+---
+
+### 🟢 AI-Phase 2 — Browser & Desktop Automation
+**Cycles 5–8**
+
+Goal: extend automation beyond APIs into automating actions on websites and the desktop — the other major class of "repetitive task" automation.
+
+**What to learn:**
+- Playwright (Python) — navigating pages, filling forms, scraping, waiting for elements
+- Combining scraping + LLM — extract → summarize/classify → output
+- PyAutoGUI basics — desktop automation for apps without APIs
+- Headless vs. headed browser tradeoffs, handling logins/sessions safely
+
+**Resources:**
+- [Playwright Python docs + official tutorial](https://playwright.dev/python/docs/intro) — free, the current standard for browser automation
+- [Firecrawl blog — AI-powered web scraping guides](https://www.firecrawl.dev/blog) — practical guides on web scraping automation, running scrapers on a schedule, and automated price tracking tools
+- [Real Python — Web Scraping with Playwright](https://realpython.com) — search site for Playwright tutorials
+- PyAutoGUI official docs — for desktop-level automation
+
+**Project: `web-scrape-to-report/`**
+Steps:
+1. Pick a recurring info-gathering task (e.g., checking YouTube channel stats, news on a topic, or job listings)
+2. Build a Playwright script to scrape the target page(s) on a schedule
+3. Pipe scraped data through `llm_utils.py` from Phase 1 to summarize/classify
+4. Output a formatted weekly report (Markdown or email via Gmail API)
+5. Add error handling for site structure changes (selectors breaking)
+
+**Milestone:** A scheduled scraper + AI summary pipeline producing one real weekly report.
+
+---
+
+### 🟡 AI-Phase 3 — Agentic Workflows
+**Cycles 9–13**
+
+Goal: move from single LLM calls to agents that plan, use tools, and iterate — the core differentiator of "AI doing repetitive tasks" vs. "AI answering questions."
+
+**What to learn:**
+- The agentic loop: gather context → take action → observe → verify the agentic loop (gather context, take action, verify results)
+- Tool/function calling in depth — designing tool schemas, multi-tool agents
+- ReAct pattern — reasoning + acting loops, hand-rolled (no framework first)
+- Basic LangChain or LangGraph — once the hand-rolled version is understood
+- MCP (Model Context Protocol) basics — connecting agents to external tools/data the flagship Anthropic course covers the full Claude API lifecycle including tool use, prompt caching, extended thinking, and MCP
+
+**Resources:**
+- [Anthropic Academy — Building with the Claude API (Tool Use, RAG, Agents modules)](https://www.anthropic.com/learn) — seven modules covering API fundamentals, prompt engineering, tool use, retrieval systems, and agentic workflows, building chat interfaces, evaluation pipelines, tool-enabled systems, RAG, and autonomous agents
+- [Anthropic — Building Effective Agents (engineering blog)](https://www.anthropic.com/research/building-effective-agents) — patterns for agent design without over-engineering
+- [Decoding AI — free production-grade AI systems courses](https://decodingai.com) — six free courses on building production-grade systems with clean, modular code that scales beyond notebooks
+- [Building AI Agents with Node.js & TypeScript](https://freeacademy.ai) (optional, if exploring JS) — a comprehensive free agentic AI course for the JavaScript ecosystem covering tool calling, memory, planning, and multi-agent orchestration
+
+**Project: `agent-loop-basics/` → `task-agent/`**
+Steps:
+1. Hand-roll a simple ReAct loop in Python: LLM decides action → script executes → result fed back → repeat until done
+2. Give it 2–3 real tools (e.g., read file, run subtitle pipeline step, search local data)
+3. Add a stopping condition + max-iteration safeguard
+4. Once working, rebuild the same agent using LangChain or LangGraph and compare
+5. (Optional) Wire in an MCP server for one external tool (e.g., file system or Google Drive)
+
+**Milestone:** A working multi-step agent (hand-rolled + framework version) automating a real recurring task from your workflow (e.g., subtitle backlog triage).
+
+---
+
+### 🟣 AI-Phase 4 — Local LLMs, Optimization & Portfolio
+**Cycles 14–18**
+
+Goal: round out the skillset with local/offline AI (cost control, privacy, hardware constraints) and package everything into a portfolio of shipped tools.
+
+**What to learn:**
+- Ollama setup, running quantized models locally (GGUF formats)
+- Model selection tradeoffs for limited hardware 
+- Cost/latency comparison: local vs. API models for different task types
+- Packaging tools — turning scripts into Gradio apps or simple CLIs with docs
+- Portfolio polish — READMEs, demo videos/GIFs, "before/after" time-saved framing
+
+**Resources:**
+- [Ollama official docs](https://ollama.com) — model library, quantization guides
+- [Hugging Face — Open LLM Leaderboard](https://huggingface.co/spaces) — for picking models that fit your hardware
+- [Anthropic Academy — Claude Code 101](https://www.anthropic.com/learn) — covers installation across terminal, VS Code, JetBrains, and the Explore → Plan → Code → Commit workflow, useful for packaging/maintaining these projects going forward
+
+**Project: portfolio consolidation**
+Steps:
+1. Benchmark 2–3 local models (via Ollama) against GPT/Claude
+2. Document cost/quality/speed tradeoffs in a comparison table
+3. Polish all 4 phase projects — consistent READMEs, setup instructions, example outputs
+4. Record a short demo (GIF/video) for each tool
+5. Write one summary post ("4 AI automations I built and what they save me weekly")
+
+**Milestone:** 4 polished, documented automation tools in `ai-automation-track/`, each with a working demo and measurable time saved.
+
+---
+
 ## 📁 Repository Structure
 
 ```
@@ -155,7 +307,7 @@ data-analyst-roadmap/
 ├── README.md
 ├── resources.md
 ├── progress/
-│   └── daily-log.md               ← daily session entries
+│   └── daily-log.md               ← daily session entries (both tracks)
 ├── phase-1-foundations/
 │   ├── python/
 │   │   └── subtitle-analyzer/
@@ -167,9 +319,18 @@ data-analyst-roadmap/
 ├── phase-3-dashboards/
 │   ├── powerbi/
 │   └── visualizations/
-└── phase-4-job-ready/
-    ├── portfolio/
-    └── capstone/
+├── phase-4-job-ready/
+│   ├── portfolio/
+│   └── capstone/
+└── ai-automation-track/
+    ├── ai-phase-1-foundations/
+    │   └── prompt-toolkit/
+    ├── ai-phase-2-browser-automation/
+    │   └── web-scrape-to-report/
+    ├── ai-phase-3-agentic-workflows/
+    │   └── agent-loop-basics/
+    └── ai-phase-4-local-and-portfolio/
+        └── local-llm-experiments/
 ```
 
 ---
@@ -179,8 +340,9 @@ data-analyst-roadmap/
 Every study session gets logged in `progress/daily-log.md` using this format:
 
 ```markdown
-## YYYY-MM-DD · Day · Week N · Phase N
+## YYYY-MM-DD · Day · Week N · Phase N / AI-Automation
 
+**Track:** Data Analyst / AI Automation  
 **Session:** AM / PM / Both  
 **Hours:** X.X  
 **Mood:** X/5  
@@ -202,6 +364,10 @@ Every study session gets logged in `progress/daily-log.md` using this format:
 | 🟢 Phase 2 — Analytics Core | ⬜ Not Started | 4–8 | Full EDA project on Kaggle |
 | 🟡 Phase 3 — Dashboards | ⬜ Not Started | 9–14 | Published Power BI dashboard |
 | 🟣 Phase 4 — Job-Ready | ⬜ Not Started | 15–20 | First interview scheduled |
+| 🔵 AI-Phase 1 — Foundations | 🔄 In Progress | Cycles 1–4 | `llm_utils.py` + prompt patterns doc |
+| 🟢 AI-Phase 2 — Browser Automation | ⬜ Not Started | Cycles 5–8 | Scheduled scraper + AI report |
+| 🟡 AI-Phase 3 — Agentic Workflows | ⬜ Not Started | Cycles 9–13 | Working multi-step task agent |
+| 🟣 AI-Phase 4 — Local & Portfolio | ⬜ Not Started | Cycles 14–18 | 4 polished tools + benchmarks |
 
 ---
 
@@ -225,4 +391,4 @@ Building in public. Open to feedback, suggestions, and connections in the PH dat
 
 ---
 
-*This roadmap is self-designed and self-funded. Every commit is a session. Every project is proof.*
+*This roadmap is self-designed and self-funded. Every commit is a session. Every project is proof.* 
