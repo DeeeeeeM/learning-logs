@@ -1,3 +1,19 @@
+## 2026-06-16 · Day 8 · Week 5 · Phase 1
+
+**Session:** PM
+**Hours:** 1
+**Mood:** 1/5  
+
+**Topics:** Filtering and sorting Query results
+
+**Built:** 
+Learned lessons 4 where it discussed DISTINCT which hides duplicate rows, ORDER BY which orders the list by ASC and DESC, and LIMIT OFFSET where it limits the list and offsets or choose which row to start counting.  
+
+**Blockers:** 
+Only spent an hour due to mental fatigue after work. 
+
+---
+
 ## 2026-06-10 · Day 7 · Week 4 · Phase 1
 
 **Session:** PM

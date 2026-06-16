@@ -76,3 +76,34 @@ SELECT * FROM movies WHERE Director = "John Lasseter";
 SELECT * FROM movies WHERE Director != "John Lasseter";
 SELECT * FROM movies WHERE Title LIKE "WALL-_";
 
+
+SQL Lesson 4: Filtering and sorting Query results
+
+SQL provides a convenient way to discard rows that have a duplicate column value by 
+using the DISTINCT
+
+SELECT DISTINCT column, another_column, …
+FROM mytable
+WHERE condition(s);
+
+
+Ordering results
+SQL provides a way to sort your results by a given column in ascending or descending order 
+using the ORDER BY
+
+SELECT column, another_column, …
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC;
+
+
+Limiting results to a subset
+The LIMIT will reduce the number of rows to return, 
+and the optional OFFSET will specify where to begin counting the number rows from.
+
+
+Excercise
+SELECT DISTINCT Director FROM Movies ORDER BY Director ASC;
+SELECT Title, Year FROM Movies ORDER BY Year DESC LIMIT 4;
+SELECT Title, Year FROM Movies ORDER BY Title ASC LIMIT 5;
+SELECT Title, Year FROM Movies ORDER BY Title ASC LIMIT 5 OFFSET 5;
