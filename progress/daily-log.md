@@ -1,3 +1,19 @@
+## 2026-06-18 · Day 8 · Week 5 · Phase 1
+
+**Session:** PM
+**Hours:** 4
+**Mood:** 2/5  
+
+**Topics:** INNER JOINS and OUTER JOINS + NULLS
+
+**Built:** 
+Learned about how INNER LEFT RIGHT FULL JOINS work and also how NULL behaves in SQL. Also added AI Automation Track
+
+**Blockers:** 
+Issues in neighborhood, work distractions, and family errands.
+
+---
+
 ## 2026-06-16 · Day 8 · Week 5 · Phase 1
 
 **Session:** PM
