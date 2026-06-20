@@ -197,3 +197,125 @@ FROM buildings
   LEFT JOIN employees
     ON building_name = building
 WHERE role IS NULL;
+
+SQL Lesson 9: Queries with expressions
+
+You can also use expressions to write more complex logic on column values in a query. 
+These expressions can use mathematical and string functions along with basic arithmetic 
+to transform values when the query is executed
+
+SELECT particle_speed / 2.0 AS half_particle_speed
+FROM physics_data
+WHERE ABS(particle_position) * 10.0 > 500;
+
+We recommend that when expressions are used in the SELECT part of the query, 
+that they are also given a descriptive alias using the AS keyword.
+
+SELECT col_expression AS expr_description, …
+FROM mytable;
+
+Regular columns and even tables can also have aliases to make them easier to reference in the output
+
+SELECT column AS better_column_name, …
+FROM a_long_widgets_table_name AS mywidgets
+INNER JOIN widget_sales
+  ON mywidgets.id = widget_sales.widget_id;
+
+
+Excercise:
+SELECT title, (domestic_sales + international_sales) / 1000000 
+AS sales FROM movies 
+INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;
+
+SELECT title, rating * 10 AS percent_ratings FROM movies 
+INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;
+
+SELECT title, year FROM movies WHERE year % 2 = 0;
+
+SQL Lesson 10: Queries with aggregates (Pt. 1)
+
+SQL supports the use of aggregate expressions (or functions) 
+that allow you to summarize information about a group of rows of data.
+
+SELECT AGG_FUNC(column_or_expression) AS aggregate_description, …
+FROM mytable
+WHERE constraint_expression;
+
+Common aggregate functions
++-------------------------+--------------------------------------------------------------------------------------------------+
+| Function                | Description                                                                                      |
++-------------------------+--------------------------------------------------------------------------------------------------+
+| COUNT(*)                | Counts the number of rows in the group.                                                          |
+| COUNT(column)           | Counts the number of rows in the group with non-NULL values in the specified column.             |
++-------------------------+--------------------------------------------------------------------------------------------------+
+| MIN(column)             | Finds the smallest numerical value in the specified column for all rows in the group.            |
++-------------------------+--------------------------------------------------------------------------------------------------+
+| MAX(column)             | Finds the largest numerical value in the specified column for all rows in the group.             |
++-------------------------+--------------------------------------------------------------------------------------------------+
+| AVG(column)             | Finds the average numerical value in the specified column for all rows in the group.             |
++-------------------------+--------------------------------------------------------------------------------------------------+
+| SUM(column)             | Finds the sum of all numerical values in the specified column for the rows in the group.         |
++-------------------------+--------------------------------------------------------------------------------------------------+
+
+Grouped aggregate functions
+You can apply the aggregate functions to individual groups of data within that group 
+(ie. box office sales for Comedies vs Action movies).
+
+The GROUP BY clause works by grouping rows that have the same value in the column specified.
+
+SELECT AGG_FUNC(column_or_expression) AS aggregate_description, …
+FROM mytable
+WHERE constraint_expression
+GROUP BY column;
+
+
+Excercise:
+SELECT max(years_employed) FROM employees;
+SELECT Role, AVG(years_employed) FROM employees GROUP BY role;
+SELECT Building, SUM(Years_employed) FROM employees GROUP BY Building;
+
+
+SQL Lesson 11: Queries with aggregates (Pt. 2)
+SQL have an additional HAVING clause used specifically with the GROUP BY clause 
+to allow us to filter grouped rows from the result set.
+
+SELECT group_by_column, AGG_FUNC(column_expression) AS aggregate_result_alias, …
+FROM mytable
+WHERE condition
+GROUP BY column
+HAVING group_condition;
+
+Excercise:
+SELECT Role, SUM(Role = "Artist") AS Total_artist FROM employees WHERE Role = "Artist";
+SELECT Role, COUNT(Name) AS Total_employees FROM employees GROUP BY Role;
+SELECT Role, SUM(years_employed) AS Total_years FROM employees GROUP BY Role HAVING Role = "Engineer";
+
+Extra note:
+
+Full rule of thumb
+WHERE	    rows	    filter data BEFORE grouping
+GROUP BY    groups	    group rows
+HAVING	    groups	    filter AFTER grouping
+
+
+SQL Lesson 12: Order of execution of a Query
+
+1. FROM and JOINs
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. DISTINCT
+7. ORDER BY
+8. LIMIT / OFFSET
+
+Not every query needs to have all the parts, but a part of why SQL is so flexible 
+is that it allows developers and data analysts to quickly manipulate data 
+without having to write additional code, all just by using the above clauses.
+
+Excercise:
+SELECT Director, Count(Director) AS directed_movies FROM movies GROUP BY Director;
+
+SELECT Director, SUM(Domestic_sales + International_sales) AS total_sales FROM movies 
+INNER JOIN Boxoffice ON Movies.id = Boxoffice.Movie_id 
+GROUP BY Director;

@@ -1,3 +1,19 @@
+## 2026-06-20 · Day 9 · Week 5 · Phase 1
+
+**Session:** AM
+**Hours:** 2
+**Mood:** 3/5  
+
+**Topics:** Query with Expressions, Aggregates, and Order of a Query
+
+**Built:** 
+Studied all about Query with Expressions, different aggregate functions, and how the order of execution from a query works.
+
+**Blockers:** 
+Family errands distrations.
+
+---
+
 ## 2026-06-18 · Day 8 · Week 5 · Phase 1
 
 **Session:** PM

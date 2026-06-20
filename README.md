@@ -9,6 +9,7 @@
 Transitioning into the dev/tech industry from a background in multimedia, writing, and Python scripting. No bootcamp — structured self-designed curriculum built around real tools, real projects, and consistent daily practice.
 
 **Started:** May 2026  
+**Location:** Philippines
 
 ---
 
@@ -26,8 +27,9 @@ Transitioning into the dev/tech industry from a background in multimedia, writin
 |---|---|---|---|
 | 🔵 Phase 1 | n8n + LLM API Foundations | 🔄 In Progress | 3 working n8n workflows + `llm_utils.py` |
 | 🟢 Phase 2 | CRM Automation + Lead Nurturing | ⬜ Not Started | HubSpot pipeline + nurture sequence + weekly report |
-| 🟡 Phase 3 | Legal Ops + Document Automation | ⬜ Not Started | Intake system + contract summarizer + matter dashboard |
-| 🟣 Phase 4 | Content Automation + Portfolio | ⬜ Not Started | Content pipeline + 8+ polished tools + CV updated |
+| 🟠 Phase 2.5 | AI Systems Foundations (RAG, Eval, Deploy) | ⬜ Not Started | RAG pipeline + evaluation framework + Docker deploy |
+| 🟡 Phase 3 | Legal Ops + Document Automation | ⬜ Not Started | RAG-powered intake + contract summarizer + dashboard |
+| 🟣 Phase 4 | Content Automation + Portfolio | ⬜ Not Started | Content pipeline + 10+ polished tools + CV updated |
 
 ---
 
@@ -58,20 +60,14 @@ learning-logs/
 │   ├── README.md
 │   ├── progress/daily-log.md
 │   ├── phase-1-foundations/
-│   │   ├── n8n-email-to-task/
-│   │   ├── n8n-lead-intake-form/
-│   │   └── prompt-toolkit/
 │   ├── phase-2-crm-automation/
-│   │   ├── crm-lead-pipeline/
-│   │   ├── lead-nurture-sequence/
-│   │   └── pipeline-reporting-sheet/
+│   ├── phase-2.5-ai-systems-foundations/
+│   │   ├── rag-pipeline-basics/
+│   │   ├── rag-evaluation-framework/
+│   │   ├── hybrid-search-upgrade/
+│   │   └── docker-deploy/
 │   ├── phase-3-legal-ops/
-│   │   ├── client-intake-workflow/
-│   │   ├── contract-summarizer/
-│   │   └── matter-pipeline-dashboard/
 │   └── phase-4-content-and-portfolio/
-│       ├── content-repurposing-pipeline/
-│       └── automated-email-sequence-builder/
 │
 └── data-analyst/
     ├── README.md

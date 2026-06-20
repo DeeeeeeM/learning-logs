@@ -4,11 +4,20 @@
 
 **Primary focus path. Target role by June 2027.**
 
+---
 
+## 🎯 Target Role
+
+**Position:** AI Engineer (Full-Time, Remote)  
+**Target:** Boutique professional services firms (legal, advisory, property) — specifically roles like the WeAssist/Gold Coast Law Firm AI Engineer posting  
+**Deadline:** June 2027 (~12 months)  
+**Salary range at target:** PHP 60,000–80,000/month  
+
+**Background entering this path:** Python scripting, OpenAI API (`yt-toolkits`), Whisper transcription, Gradio apps, n8n (learning), API integrations, GitLab, subtitle pipeline automation
 
 ---
 
-## 🔍 Average Requirements Analysis
+## 🔍 Job Requirements Gap Analysis
 
 | Requirement | Status | Phase That Closes It |
 |---|---|---|
@@ -16,8 +25,13 @@
 | OpenAI / LLM — summarization, drafting, classification | ✅ Strong (yt-toolkits) | Phase 1 (formalize) |
 | CRM automation — HubSpot / GoHighLevel | ❌ Not started | Phase 2 |
 | APIs, integrations, data flow logic | ✅ Strong | Phase 1 (formalize) |
+| RAG pipelines — retrieval-augmented generation | ❌ Not started | Phase 2.5 |
+| Vector databases — Qdrant, embeddings, hybrid search | ❌ Not started | Phase 2.5 |
+| AI evaluation — RAGAS, LLM-as-Judge, golden datasets | ❌ Not started | Phase 2.5 |
+| AI observability — tracing, logging, monitoring | ❌ Not started | Phase 2.5 |
+| Docker — containerized deployment | ❌ Not started | Phase 2.5 |
 | Pipeline dashboards — enquiry, capacity, conversion | ❌ Not started | Phase 3 |
-| AI-assisted document review / contract summary | ❌ Not started | Phase 3 |
+| AI-assisted document review / contract summary | ❌ Not started | Phase 3 (RAG-powered) |
 | Automated client intake workflows | ❌ Not started | Phase 3 |
 | Content automation — SEO, email, social repurposing | ❌ Not started | Phase 4 |
 | Practice management tool integrations | ❌ Nice-to-have | Phase 4 |
@@ -29,9 +43,10 @@
 | Phase | Focus | Status | Key Milestone |
 |---|---|---|---|
 | 🔵 Phase 1 | n8n + LLM API Foundations | 🔄 In Progress | 3 working n8n workflows + `llm_utils.py` |
-| 🟢 Phase 2 | CRM Automation + Lead Nurturing | ⬜ Not Started | HubSpot/GHL automation + lead pipeline |
-| 🟡 Phase 3 | Legal Ops + Document Automation | ⬜ Not Started | Intake system + contract summarizer + dashboard |
-| 🟣 Phase 4 | Content Automation + Portfolio | ⬜ Not Started | Content pipeline + 4 polished portfolio tools |
+| 🟢 Phase 2 | CRM Automation + Lead Nurturing | ⬜ Not Started | HubSpot pipeline + nurture sequence + weekly report |
+| 🟠 Phase 2.5 | AI Systems Foundations (RAG, Eval, Deploy) | ⬜ Not Started | RAG pipeline + evaluation framework + Docker deploy |
+| 🟡 Phase 3 | Legal Ops + Document Automation | ⬜ Not Started | RAG-powered intake + contract summarizer + dashboard |
+| 🟣 Phase 4 | Content Automation + Portfolio | ⬜ Not Started | Content pipeline + 8+ polished tools + CV updated |
 
 ---
 
@@ -177,19 +192,136 @@ Steps:
 
 ---
 
+## 🟠 Phase 2.5 — AI Systems Foundations (RAG, Evaluation, Deployment)
+
+**Goal:** Build the production AI engineering skills that are missing from the path but required to build serious document automation tools in Phase 3. This phase exists so that the `contract-summarizer` and `matter-pipeline-dashboard` are built the right way from the start — with proper retrieval, measurable accuracy, and deployable packaging — not retrofitted later.
+
+This phase is directly informed by the NeoSage Engineer's RAG Accelerator curriculum, covered here with free resources.
+
+### What to Learn
+
+**RAG (Retrieval-Augmented Generation):**
+- What RAG is and when to use it vs. pure LLM calls
+- Data ingestion — handling PDF, Word, and plain text as document corpora
+- The full RAG loop: index → retrieve → generate → evaluate
+- Chunking strategies — naive, sentence, recursive, semantic, hybrid content-aware; how chunking choice affects retrieval accuracy more than model choice
+- When to chunk large vs. small, how overlap preserves cross-boundary context
+
+**Embeddings + Vector Databases:**
+- How text becomes vectors — tokenization, embedding models, vector space
+- Choosing an embedding model — FastEmbed (free, local), Voyage AI (quality), OpenAI `text-embedding-3-small` (balanced)
+- Qdrant — the vector database used in production RAG systems; indexing, querying, metadata filtering
+- HNSW (Hierarchical Navigable Small World) — how approximate nearest neighbor search works under the hood (conceptual, not implementation)
+
+**Hybrid Search:**
+- Dense retrieval (vector similarity) vs. sparse retrieval (BM25 keyword matching)
+- Reciprocal Rank Fusion (RRF) — combining dense and sparse scores into a single ranked list
+- When hybrid search beats pure vector search (keyword-heavy legal documents especially)
+- Reranking — using a cross-encoder model to rerank top-k results for higher accuracy
+
+**AI Evaluation:**
+- Why measuring output quality is harder than building the system
+- Golden dataset curation — creating ground truth question/answer pairs from your own documents
+- Synthetic test generation — using LLMs to generate test cases when no ground truth exists
+- LLM-as-Judge — using a second LLM to score the output of your primary LLM
+- RAGAS metrics — answer relevancy, faithfulness, context precision, context recall
+- DeepEval — open-source evaluation framework for LLM outputs
+- Triangulating across 3 evaluation methods to find where a system breaks
+
+**AI Observability:**
+- Why observability matters in production — catching hallucinations, tracking latency, cost per call
+- Opik (open source, self-hosted) — tracing LLM calls, logging inputs/outputs, monitoring pipelines
+- What to log on every LLM call: prompt, response, model, tokens, latency, cost, retrieval sources used
+- User feedback loops — thumbs up/down signals as production evaluation data
+
+**Docker Basics:**
+- What Docker is and why it matters for AI tools (reproducibility, deployment)
+- Writing a `Dockerfile` for a Python FastAPI or Streamlit app
+- `docker build`, `docker run`, `docker-compose` for multi-service setups (app + vector DB)
+- Deploying a containerized app to Railway or Render (free tier)
+
+**Semantic Caching (Redis) — optional:**
+- How Redis stores recently-seen query embeddings to return cached responses
+- Sub-50ms response times for repeated queries — relevant for a matter dashboard with frequent refreshes
+- When caching is worth the complexity vs. when to skip it
+
+### Resources
+
+- [NeoSage — The Engineer's Guide to RAG](https://blog.neosage.io/p/the-engineers-guide-to-rag) — free, the best single starting read on RAG
+- [Qdrant docs + quickstart](https://qdrant.tech/documentation/quickstart/) — vector DB setup, Python client, hybrid search guide
+- [RAGAS docs](https://docs.ragas.io) — open source, full evaluation framework with examples
+- [DeepEval docs](https://docs.confident-ai.com) — open source LLM evaluation, LLM-as-Judge pipelines
+- [Opik GitHub (Comet ML)](https://github.com/comet-ml/opik) — free, self-hosted LLM observability and tracing
+- [LangChain — RAG from scratch (YouTube playlist)](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) — 14 short videos building RAG from first principles
+- [sentence-transformers / FastEmbed docs](https://sbert.net) — local embedding models, no API cost
+- [Docker Getting Started](https://docs.docker.com/get-started/) — official beginner guide
+- [Redis quickstart](https://redis.io/docs/getting-started/) — for semantic caching (Phase 2.5 optional project)
+- [Hugging Face — MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard) — benchmark for choosing embedding models
+
+### Projects
+
+**Project 1: `rag-pipeline-basics/`**
+Build a working RAG pipeline from scratch on real documents — the foundational pattern used in every Phase 3 project.
+Steps:
+1. Pick a document corpus (e.g., 10–20 sample legal FAQs, contract templates, or your own work documents in PDF/Word)
+2. Ingest and parse documents with `pdfplumber` + `python-docx` → clean text
+3. Implement and compare 3 chunking strategies: naive (fixed size), recursive (by separator), semantic (by topic shift) — log chunk counts and sizes for each
+4. Embed chunks using FastEmbed (free, local) — store in a local Qdrant collection
+5. Build a retrieval function: query → embed → search Qdrant → return top-k chunks
+6. Add a generation step: retrieved chunks + user question → LLM answer via `llm_utils.py`
+7. Test with 10 questions across the corpus — log retrieved chunks and answers
+8. Document which chunking strategy produced the best retrieval in `CHUNKING-RESULTS.md`
+
+**Project 2: `rag-evaluation-framework/`**
+Build a reusable evaluation layer that measures RAG system accuracy — used to validate every later document tool.
+Steps:
+1. Create a golden dataset: 20 question/answer pairs manually written from the corpus used in Project 1
+2. Use an LLM to generate 20 additional synthetic QA pairs from the same corpus (`llm_utils.py` + structured output)
+3. Build an LLM-as-Judge scorer: given (question, retrieved context, generated answer), the judge LLM returns a score (1–5) with reasoning
+4. Install and configure RAGAS — run faithfulness and answer relevancy metrics on the same test set
+5. Compare manual scores vs. RAGAS metrics vs. LLM-as-Judge scores across all 40 test questions
+6. Document discrepancies and conclusions in `EVALUATION-REPORT.md` — this report becomes proof of production thinking in your portfolio
+
+**Project 3: `hybrid-search-upgrade/`**
+Upgrade the RAG pipeline from Project 1 with hybrid search and reranking.
+Steps:
+1. Add BM25 sparse retrieval alongside Qdrant dense retrieval
+2. Implement Reciprocal Rank Fusion to merge the two ranked lists into one
+3. Add a reranking step using a cross-encoder model (e.g., `cross-encoder/ms-marco-MiniLM-L-6-v2` from Hugging Face — free)
+4. Run the same 40-question evaluation from Project 2 on the upgraded pipeline
+5. Compare accuracy before (dense only) vs. after (hybrid + rerank) in `HYBRID-RESULTS.md`
+6. Document the tradeoff: accuracy gain vs. latency cost
+
+**Project 4: `docker-deploy/`**
+Package the RAG pipeline as a deployable containerized app.
+Steps:
+1. Wrap the RAG pipeline in a simple FastAPI app: `POST /ask` takes `{question, corpus_id}`, returns `{answer, sources, latency_ms}`
+2. Add Opik tracing to every LLM call — log prompt, response, retrieved chunks, tokens, latency
+3. Write a `Dockerfile` for the FastAPI app
+4. Write a `docker-compose.yml` that starts both the app and a local Qdrant container
+5. Test `docker compose up` — confirm the API is reachable and Qdrant is persisting data
+6. Deploy to Railway or Render free tier — get a live public URL
+7. Document the architecture with a simple diagram and add the live URL to the README
+
+**Milestone:** A production-quality RAG pipeline with hybrid search, an evaluation framework with documented accuracy metrics, and a live deployed API — all reusable as the foundation for Phase 3 legal ops projects.
+
+---
+
 ## 🟡 Phase 3 — Legal Ops + Document Automation
 
 **Goal:** Build the operational infrastructure the target role specifically calls for — client intake automation, AI-assisted document review, contract summarization, matter status updates, and pipeline dashboards. This is the most job-specific phase.
 
 ### What to Learn
 
-- Structured document processing — parsing PDFs and Word docs in Python (`pdfplumber`, `python-docx`)
-- AI-assisted document review — chunking long documents, summarizing with LLMs, extracting key clauses
-- Client intake system design — form → validation → CRM → document generation → notification
-- Template-based document generation — filling `.docx` templates with dynamic data
-- Matter pipeline dashboards — visualizing turnaround times, capacity, bottlenecks
-- Automated notification workflows — status update emails/SMS triggered by matter stage changes
-- Webhook + n8n for ops triggers — matter updated → n8n fires → client gets status SMS
+> Phase 3 builds directly on Phase 2.5. The RAG pipeline, evaluation framework, Docker setup, and Opik observability are already in place — this phase applies them to legal ops use cases.
+
+- Structured document processing — `pdfplumber` (PDF), `python-docx` (Word) for ingestion into the RAG pipeline
+- Legal document Q&A design — writing retrieval query templates for clause extraction (obligations, risks, parties, dates, termination)
+- Client intake system design — form → validation → CRM → document generation → notification chain
+- Template-based document generation — filling `.docx` templates with dynamic data from intake forms
+- Matter pipeline dashboards — visualizing turnaround times, capacity, bottlenecks using Streamlit
+- Automated notification workflows — matter stage changes triggering status update emails via n8n
+- Connecting RAG output to n8n — Python RAG tool → REST endpoint → n8n HTTP Request node → downstream actions
 
 ### Resources
 
@@ -214,14 +346,17 @@ Steps:
 6. Document as a flowchart (can reuse SVG diagram format from work docs)
 
 **Project 2: `contract-summarizer/`**
-Build an AI tool that reads a contract or legal document and returns a structured summary.
+Build a RAG-powered contract review tool that retrieves relevant clauses and generates structured summaries — using the pipeline and evaluation framework built in Phase 2.5.
 Steps:
 1. Accept PDF or `.docx` input via a simple Gradio UI or CLI
-2. Extract text with `pdfplumber` (PDF) or `python-docx` (Word)
-3. Chunk document into segments with overlap to preserve context across boundaries
-4. Send each chunk to `llm_utils.py` with a legal summarization prompt — extract: parties, key dates, obligations, risks, termination clauses
-5. Aggregate chunk summaries into a final structured output (JSON + human-readable Markdown)
-6. Test on 3 real or sample contracts, document accuracy and any hallucination patterns
+2. Extract and clean text with `pdfplumber` / `python-docx`
+3. Chunk and embed the document into a Qdrant collection (reuse Phase 2.5 pipeline)
+4. Build query templates for key legal extractions: "What are the termination clauses?", "Who are the parties?", "What are the key obligations?", "What are the payment terms?", "What are the risk or liability clauses?"
+5. Run each query through the RAG retriever → generate answer from retrieved chunks via `llm_utils.py`
+6. Aggregate all answers into a structured JSON summary + human-readable Markdown report
+7. Run the Phase 2.5 evaluation framework on 3 sample contracts — log faithfulness and answer relevancy scores
+8. Add Opik tracing so every summarization run is logged with retrieved sources and LLM responses
+9. Package as a Docker container using the Phase 2.5 `Dockerfile` pattern
 
 **Project 3: `matter-pipeline-dashboard/`**
 Build a matter status dashboard showing turnaround times, team capacity, and bottlenecks.
@@ -281,11 +416,11 @@ Steps:
 1. Benchmark Ollama local model vs. GPT-4o-mini on one real task (contract summarization or email classification)
 2. Document cost/quality/speed tradeoffs in a `BENCHMARK.md`
 3. Polish all projects: consistent README structure, `requirements.txt`, `.env.example`, example output files
-4. Record a 1–2 min demo GIF/video for each of the 4 phase capstone projects
+4. Record a 1–2 min demo GIF/video for each phase capstone project
 5. Write a LinkedIn summary post: "I spent 12 months building AI automation systems — here's what I shipped"
-6. Update CV with: n8n, Make, HubSpot, GoHighLevel, LLM API integration, OpenAI, document automation, CRM automation, Playwright, Streamlit
+6. Update CV with: n8n, Make, HubSpot, GoHighLevel, LLM API integration, OpenAI, RAG pipelines, Qdrant, RAGAS, Docker, document automation, CRM automation, Streamlit
 
-**Milestone:** Portfolio of 8+ documented automation tools across 4 phases, CV updated, LinkedIn active, applications live.
+**Milestone:** Portfolio of 10+ documented automation tools across 5 phases, CV updated, LinkedIn active, applications live.
 
 ---
 
@@ -310,6 +445,17 @@ ai-automation-engineering/
 │   ├── crm-lead-pipeline/
 │   ├── lead-nurture-sequence/
 │   └── pipeline-reporting-sheet/
+│
+├── phase-2.5-ai-systems-foundations/
+│   ├── rag-pipeline-basics/
+│   │   └── CHUNKING-RESULTS.md
+│   ├── rag-evaluation-framework/
+│   │   └── EVALUATION-REPORT.md
+│   ├── hybrid-search-upgrade/
+│   │   └── HYBRID-RESULTS.md
+│   └── docker-deploy/
+│       ├── Dockerfile
+│       └── docker-compose.yml
 │
 ├── phase-3-legal-ops/
 │   ├── client-intake-workflow/
@@ -352,6 +498,10 @@ Every session logged in `progress/daily-log.md`:
 ![HubSpot](https://img.shields.io/badge/HubSpot-FF7A59?style=flat&logo=hubspot&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini_API-4285F4?style=flat&logo=google&logoColor=white)
+![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=flat&logo=qdrant&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 
 ---
 
