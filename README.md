@@ -76,7 +76,18 @@ learning-logs/
     ├── phase-2-analytics/
     ├── phase-3-dashboards/
     └── phase-4-job-ready/
+
+tools/
+└── git-github-gitlab.md         ← Git → GitHub → GitLab learning path (VSCode-first)
 ```
+
+---
+
+## 🔧 Foundational Tools
+
+| Guide | Description |
+|---|---|
+| [Git → GitHub → GitLab](./tools/git-github-gitlab.md) | 3-stage path: local Git core → GitHub portfolio → GitLab CI/CD; VSCode setup, best resources, practice projects |
 
 ---
 

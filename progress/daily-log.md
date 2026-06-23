@@ -1,3 +1,21 @@
+## 2026-06-23 · Day 10 · Week 6 · Phase 1
+
+**Session:** AM/PM
+**Hours:** 3
+**Mood:** 3/5  
+
+**Topics:** Side Questing with Git
+
+**Built:** 
+Started learning Git in detail, finished the following lessons:
+- Merging, Branching Rebase
+- Head navigating using (HEAD, ^, ~, revert, reset)
+
+**Blockers:** 
+Migraine, sleepyness
+
+---
+
 ## 2026-06-20 · Day 9 · Week 5 · Phase 1
 
 **Session:** AM
