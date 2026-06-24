@@ -1,4 +1,26 @@
-## 2026-06-23 · Day 10 · Week 6 · Phase 1
+## 2026-06-24 · Day 11 · Week 6 · Phase 1 (Git)
+
+**Session:** AM
+**Hours:** 2
+**Mood:** 4/5  
+
+**Topics:** Advanced Git learning
+
+**Built:** 
+Finished the following lessons:
+- Interactive Rebase
+- Juggling to different commits with Rebase
+- Assigning tags and describe
+- Rebase behaviours
+- Multiple parent navigating (HEAD^2)
+- Advanced Rebasing with multiple branches 
+
+**Blockers:** 
+Migraine, sleepyness
+
+---
+
+## 2026-06-23 · Day 10 · Week 6 · Phase 1 (Git)
 
 **Session:** AM/PM
 **Hours:** 3
