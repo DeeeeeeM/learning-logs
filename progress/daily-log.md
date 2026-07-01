@@ -1,3 +1,22 @@
+## 2026-06-30 · Day 12 · Week 7 
+
+**Session:** PM
+**Hours:** 4
+**Mood:** 4/5  
+
+**Topics:** Gitlab quick course
+
+**Built:** 
+Finished the following lessons:
+- SSH and PAT authentication
+- Common git commands
+- gitlab merge request
+
+**Blockers:** 
+
+
+---
+
 ## 2026-06-24 · Day 11 · Week 6 · Phase 1 (Git)
 
 **Session:** AM
@@ -16,7 +35,7 @@ Finished the following lessons:
 - Advanced Rebasing with multiple branches 
 
 **Blockers:** 
-Migraine, sleepyness
+Distractions
 
 ---
 
