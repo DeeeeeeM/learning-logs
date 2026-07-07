@@ -6,17 +6,6 @@
 
 ---
 
-## 🎯 Target Role
-
-**Position:** AI Engineer (Full-Time, Remote)  
-**Target:** Boutique professional services firms (legal, advisory, property) — specifically roles like the WeAssist/Gold Coast Law Firm AI Engineer posting  
-**Deadline:** June 2027 (~12 months)  
-**Salary range at target:** PHP 60,000–80,000/month  
-
-**Background entering this path:** Python scripting, OpenAI API (`yt-toolkits`), Whisper transcription, Gradio apps, n8n (learning), API integrations, GitLab, subtitle pipeline automation
-
----
-
 ## 🔍 Job Requirements Gap Analysis
 
 | Requirement | Status | Phase That Closes It |
