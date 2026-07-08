@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../media-toolkit"
+		},
+		{
+			"path": "../../../thumb-engine"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}
