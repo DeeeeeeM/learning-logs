@@ -1,3 +1,22 @@
+## 2026-06-30 · Day 13, 14, 15 · Week 8 
+
+**Session:** AM PM
+**Hours:** 8
+**Mood:** 3/5  
+
+**Topics:** FastAPI documentation
+
+**Built:** 
+Finished the following lessons:
+- Installation of FastAPI and venv's
+- Type Hints
+- Tried my own practice codes
+
+**Blockers:** 
+Work tasks.
+
+---
+
 ## 2026-06-30 · Day 12 · Week 7 
 
 **Session:** PM
@@ -13,7 +32,6 @@ Finished the following lessons:
 - gitlab merge request
 
 **Blockers:** 
-
 
 ---
 
