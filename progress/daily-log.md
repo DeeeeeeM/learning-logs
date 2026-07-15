@@ -1,4 +1,20 @@
-## 2026-06-30 · Day 13, 14, 15 · Week 8 
+## 2026-07-15 · Day 17 · Week 8 
+
+**Session:** AM PM
+**Hours:** 8
+**Mood:** 5/5  
+
+**Topics:** Async and Await
+
+**Built:** 
+Learned how Async and Await worked in FastAPI, discovered what asynchronous and synchronous means, and how FastAPI works for those rules.
+
+**Blockers:** 
+Urgent work task.
+
+---
+
+## 2## 2026-07-14 · Day 13, 14, 15 · Week 8 
 
 **Session:** AM PM
 **Hours:** 8
