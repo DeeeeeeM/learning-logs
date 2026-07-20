@@ -1,0 +1,29 @@
+ASYNC & AWAIT
+
+async def is a special function that can pause and resume
+await is like a remote that can pause/resume a function
+
+FastAPI's event loop "asynchronous"
+Task A runs, hits a waiting stage on getting data in db
+Task switches to Task B, same thing on waiting,
+Task switches to Task C, then Task A receives the data
+Task returns to Task A
+
+def + blocking call = separate process or "thread"
+FastAPI's safety net for libraries that can't cooperate with the event loop.
+
+
+
+Asynchronous Code
+means the computer / program  at some point in the code, 
+will have to wait for something else to finish
+
+Concurrent Burgers
+
+Asynchronous:
+You (the program) place an order (make an async call) and instead of standing frozen at the counter doing nothing productive while the burgers cook (blocking), you step away and switch to another productive task — flirting with your crush (handling a different piece of work) — and only when that task reaches a natural pause do you check back and resume the original task (getting your burgers) right where it left off; this is exactly what async await does 
+
+Synchronous:
+Even with 8 parallel cashiers each handling one customer fully, you personally still have to stand frozen at the counter the entire time your burger is being made, unable to do anything else — no turn numbers means you must wait right there or risk losing your order, so you can't switch away to talk with your crush like in the concurrent version. 
+
+Modern versions of Python have support for "asynchronous code" using something called "coroutines", with async and await syntax.
