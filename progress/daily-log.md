@@ -1,3 +1,19 @@
+## 2026-07-23 · Day 17 · Week 9 
+
+**Session:** PM
+**Hours:** 2
+**Mood:** 3/5  
+
+**Topics:** Async and Await
+
+**Built:** 
+Learned fast api's structure, schema's, difference of data and api schemas, GET method, and basic paths
+
+**Blockers:** 
+Lazyness
+
+---
+
 ## 2026-07-15 · Day 17 · Week 8 
 
 **Session:** AM PM

@@ -1,0 +1,27 @@
+"Schema"
+A "schema" is a definition or description of something. Not the code that implements it, but just an abstract description.
+
+To put it simply it describe what the data looks like 
+
+When you call "GET /posts" it displays the API enpoint behavior
+
+Kind of like forms:
+Name: __________ (Required)
+Age: __________ (Optional)
+Email: _________
+
+That's the schema. It displays the fields, types, required and optional
+
+Data Schema vs API Schema
+Data Schema - Describes the structure of data
+User
+├── name : string
+└── age  : integer
+
+API Schema - Describes the entire API
+POST /users
+    Request Body:
+        User
+    Response:
+        User
+
