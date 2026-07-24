@@ -1,10 +1,26 @@
+## 2026-07-24 · Day 18 · Week 9 
+
+**Session:** PM
+**Hours:** 1
+**Mood:** 4/5  
+
+**Topics:** Deep Dive on methods (GET, POST)
+
+**Built:** 
+Learned how actual GET and POST work and how we define schema's
+
+**Blockers:** 
+Work
+
+---
+
 ## 2026-07-23 · Day 17 · Week 9 
 
 **Session:** PM
 **Hours:** 2
 **Mood:** 3/5  
 
-**Topics:** Async and Await
+**Topics:** Fast API getting started
 
 **Built:** 
 Learned fast api's structure, schema's, difference of data and api schemas, GET method, and basic paths
