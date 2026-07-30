@@ -1,3 +1,20 @@
+## 2026-07-30 · Day 19 · Week 10
+
+**Session:** PM
+**Hours:** 2
+**Mood:** 4/5  
+
+**Topics:** HTTP Exception and PUT DELETE
+
+**Built:** 
+Learned about HTTP Exception handling and Update and Delete (PUT, DELETE) 
+
+**Blockers:** 
+Laziness
+
+---
+
+
 ## 2026-07-24 · Day 18 · Week 9 
 
 **Session:** PM
