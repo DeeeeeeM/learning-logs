@@ -1,3 +1,21 @@
+## 2026-07-31 · Day 20 · Week 10
+
+**Session:** PM
+**Hours:** 2
+**Mood:** 5/5  
+
+**Topics:** Practice Project "Media Job API"
+
+**Built:** 
+Made my own project based on what I learned in the past lessons.
+Media API is a CRUD API for creating, reading, updating, and deleting media jobs for processing. 
+
+
+**Blockers:** 
+None
+
+---
+
 ## 2026-07-30 · Day 19 · Week 10
 
 **Session:** PM

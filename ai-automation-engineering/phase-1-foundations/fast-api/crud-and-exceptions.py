@@ -48,7 +48,7 @@ def create_posts(post: Post):
 
 #/posts/ is a path parameter, can be declared again
 @app.get("/posts/{id}")
-def get_post(id: int, response: Response):
+def get_post(id: int):
     post = find_post(int(id))
     
     #To handle data that does not exist, use HTTPException and status 404
