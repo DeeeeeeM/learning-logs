@@ -1,3 +1,20 @@
+## 2026-08-04 · Day 21 · Week 11
+
+**Session:** PM
+**Hours:** 2
+**Mood:** 3/5  
+
+**Topics:** Project Improvements and PostgreSQL intro 
+
+**Built:** 
+Improve proper naming of variables and functions. Learned the PostgreSQL intro and its difference from typical DBMS apps
+
+
+**Blockers:** 
+None
+
+---
+
 ## 2026-07-31 · Day 20 · Week 10
 
 **Session:** PM

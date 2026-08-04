@@ -1,0 +1,7 @@
+Database - Collection of organized data that can be easily accessed and managed.
+
+DBMS - We use this to talk to the DB instead of directly
+(SQL)
+
+Postgres - Instance of postgres can be carved to multiple database, Each app has databases.
+
