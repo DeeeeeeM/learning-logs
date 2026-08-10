@@ -1,3 +1,21 @@
+## 2026-08-04 · Day 22 · Week 12
+
+**Session:** PM
+**Hours:** 3
+**Mood:** 3/5  
+
+**Topics:** Login Logout API Practice Project
+
+**Built:** 
+Built the Phase 1 of my practice project, added project initialization and implemented a mock database
+
+
+**Blockers:** 
+None
+
+---
+
+
 ## 2026-08-04 · Day 21 · Week 11
 
 **Session:** PM
