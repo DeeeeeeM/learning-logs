@@ -8,15 +8,17 @@
 
 ## Roadmap Focus
 
-This roadmap is structured around the capabilities required for modern AI Automation / AI Engineer roles:
+This roadmap is structured around realistic hiring expectations for Python Developer -> Automation Developer -> AI Automation Engineer progression:
 
 - Python AI applications and automation workflows
+- Python developer fundamentals: `pandas`, `NumPy`, `scikit-learn`, `requests`
 - Full-stack product delivery
 - REST, GraphQL, webhooks, SDK integrations, OAuth
 - MCP servers, tools, resources, and client workflows
 - LLM apps, RAG, agents, structured outputs, evaluation
 - CRM / ERP / ticketing / collaboration system integrations
-- Clean code, testing, CI/CD, deployment, demos, and support
+- Git workflows, scripting, testing, CI/CD, deployment, demos, and support
+- Azure-oriented delivery, with Azure SDK / Functions / Azure ML as growth targets
 
 ## What You Need To Fully Master
 
@@ -40,10 +42,10 @@ If you do not become strong in items 3, 4, 5, and 9, you will still look like a 
 
 | Stage | Phase | Title | Outcome |
 |---|---|---|---|
-| Stage 1 | Phase 1 | Junior AI Developer | Can build and expose basic AI automations safely |
-| Stage 2 | Phase 2 | AI Automation Developer | Can deliver CRM-centered business workflows end to end |
-| Stage 3 | Phase 2.5 | AI Engineer | Can build production-style AI systems with RAG, evals, security, and MCP |
-| Stage 4 | Phase 3 | Mid-Level AI Engineer / Solutions Engineer | Can solve customer operational problems with integrated AI systems |
+| Stage 1 | Phase 1 | Python Developer Foundation | Can build Python services, automation scripts, and API integrations to a junior professional standard |
+| Stage 2 | Phase 2 | Automation Developer | Can deliver business automations and backend workflows end to end |
+| Stage 3 | Phase 2.5 | AI Automation Engineer | Can build production-style AI systems with RAG, evals, security, MCP, and deployment |
+| Stage 4 | Phase 3 | Mid-Level AI Automation Engineer / Solutions Engineer | Can solve customer operational problems with integrated AI systems |
 | Stage 5 | Phase 4 | Senior AI Engineer Track | Can package, deploy, explain, and defend production-ready solutions across domains |
 
 Note: Stage 5 is a senior trajectory stage, not automatic proof of true seniority. Actual seniority also requires repeated delivery, architecture judgment, and ownership under real constraints.
@@ -54,30 +56,54 @@ Note: Stage 5 is a senior trajectory stage, not automatic proof of true seniorit
 
 | Phase | Focus | Stage | Status | Exit Milestone |
 |---|---|---|---|---|
-| Phase 1 | Workflow automation, FastAPI, LLM utilities, security basics | Junior AI Developer | In Progress | 2 workflow automations + reusable LLM service + tested API |
-| Phase 2 | CRM automation, nurturing, reporting, integration patterns | AI Automation Developer | Not Started | Working CRM pipeline with reporting and operator UI |
-| Phase 2.5 | Security, RAG, evals, observability, Docker, MCP | AI Engineer | Not Started | Deployed authenticated AI system with metrics and MCP support |
+| Phase 1 | Python, APIs, automation scripts, FastAPI, Git, security basics | Python Developer Foundation | In Progress | 2 automation scripts + reusable Python toolkit + tested API service |
+| Phase 2 | CRM automation, nurturing, reporting, integration patterns | Automation Developer | Not Started | Working CRM pipeline with reporting and operator UI |
+| Phase 2.5 | Security, RAG, evals, observability, Docker, MCP, Azure-oriented deployment | AI Automation Engineer | Not Started | Deployed authenticated AI system with metrics, MCP support, and CI/CD |
 | Phase 3 | Customer ops systems, intake, document automation, dashboards | Mid-Level AI Engineer / Solutions Engineer | Not Started | Multi-system operational solution with demo and support docs |
 | Phase 4 | Content automation, portfolio, delivery polish, domain expansion | Senior AI Engineer Track | Not Started | Portfolio with production-style case studies and deployment proof |
 
 ---
 
-## Stage 1: Junior AI Developer
+## Stage 1: Python Developer Foundation
 
 **Phase:** Phase 1  
-**Goal:** Build reliable AI automations and Python services that another system can safely call.
+**Goal:** Build the Python developer baseline that real automation and AI roles already expect before the AI-specific layer.
 
 ### You must master
 
+- Python fundamentals at working level: modules, packages, virtual environments, exceptions, file I/O
+- `requests` for API calls, auth headers, retries, and error handling
+- `pandas` and `NumPy` for lightweight data processing inside automation workflows
+- introductory `scikit-learn` literacy so model APIs and data prep do not feel foreign later
 - n8n or Make fundamentals
 - FastAPI request/response modeling with `pydantic`
+- REST API consumption and basic API design
+- Git-based workflows: branching, pull/update flow, clean commits, README habits
 - `.env` secrets, config hygiene, API key auth
 - calling LLM APIs with retries and structured output
 - logging, validation, error handling
 - basic tests for utility modules and endpoints
+- scripting for automation tasks that are useful even without LLMs
+
+### Best Resources
+
+- Python Tutorial: https://docs.python.org/3/tutorial/
+- Requests Documentation: https://requests.readthedocs.io/
+- pandas Getting Started + User Guide: https://pandas.pydata.org/docs/
+- NumPy User Guide: https://numpy.org/doc/stable/user/
+- scikit-learn User Guide: https://scikit-learn.org/stable/user_guide.html
+- FastAPI Tutorial: https://fastapi.tiangolo.com/tutorial/
+- n8n Documentation: https://docs.n8n.io/
+- GitHub Actions Documentation: https://docs.github.com/en/actions
+- Microsoft Learn for Azure Developers: https://learn.microsoft.com/en-us/training/azure/
+- Azure Functions Python Developer Guide: https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-python
 
 ### Company-grade projects
 
+1. `python-automation-scripts/`
+   Build 2-3 pure Python automation utilities that use `requests`, file processing, and structured logging.
+2. `api-integration-playground/`
+   Build a small integration layer that consumes a public REST API, normalizes the data with `pandas`, and exposes a clean reusable client.
 1. `n8n-email-to-task/`
    Internal operations workflow: classify inbound emails, create structured tasks, alert on urgency, and log outcomes.
 2. `n8n-lead-intake-form/`
@@ -86,10 +112,12 @@ Note: Stage 5 is a senior trajectory stage, not automatic proof of true seniorit
    Reusable `llm_utils.py` package with provider abstraction, schema validation, retries, and usage logging.
 4. `llm-service-api/`
    FastAPI wrapper for internal AI actions with auth, input validation, tests, and OpenAPI docs.
+5. New required Azure-aligned starter:
+   Add one small deployment or function-style exercise using either Azure Functions locally, an Azure SDK sample, or a cloud-neutral equivalent if Azure access is not available yet.
 
 ### Stage exit standard
 
-You are ready to leave this stage when you can build a workflow plus a Python API without copy-pasting from tutorials, and you can explain how validation, auth, retries, and logs work.
+You are ready to leave this stage when you can build Python scripts, consume APIs, manipulate data with `pandas`, wrap logic in a FastAPI service, and manage the code with Git without relying on tutorial copy-paste.
 
 ---
 
@@ -106,6 +134,20 @@ You are ready to leave this stage when you can build a workflow plus a Python AP
 - sequence automation and attribution tracking
 - integration reliability: retries, dedupe, idempotency, pagination
 - simple operator-facing frontend or dashboard
+- stronger REST API integration practice using SDKs or raw HTTP
+- basic CI/CD with GitHub Actions or Azure DevOps
+- cloud deployment basics, with Azure as the preferred direction
+
+### Best Resources
+
+- HubSpot Academy: https://academy.hubspot.com/
+- Integrating with HubSpot I: Foundations: https://academy.hubspot.com/courses/integrating-with-hubspot-foundations
+- HubSpot API Docs: https://developers.hubspot.com/docs/api/overview
+- React Learn: https://react.dev/learn
+- Next.js Learn: https://nextjs.org/learn
+- GitHub Actions Documentation: https://docs.github.com/en/actions
+- Azure DevOps Documentation: https://learn.microsoft.com/en-us/azure/devops/
+- Azure SDK for Python Docs: https://learn.microsoft.com/en-us/azure/developer/python/
 
 ### Company-grade projects
 
@@ -117,6 +159,8 @@ You are ready to leave this stage when you can build a workflow plus a Python AP
    Weekly performance report with conversion metrics and operational summaries.
 4. New expectation:
    Add a lightweight operator UI in React or Next.js to view intake status, pipeline metrics, and failed jobs.
+5. New required delivery expectation:
+   Add a CI pipeline for linting/tests and document how the project would deploy to Azure Functions, Azure App Service, or an equivalent container host.
 
 ### Stage exit standard
 
@@ -124,10 +168,10 @@ You are ready to leave this stage when you can take a lead flow from form submis
 
 ---
 
-## Stage 3: AI Engineer
+## Stage 3: AI Automation Engineer
 
 **Phase:** Phase 2.5  
-**Goal:** Build secure, measurable, production-style AI systems with retrieval, evaluation, deployment, and MCP.
+**Goal:** Build secure, measurable, production-style AI systems with retrieval, evaluation, deployment, MCP, and cloud delivery habits.
 
 ### You must master
 
@@ -137,8 +181,21 @@ You are ready to leave this stage when you can take a lead flow from form submis
 - golden datasets, LLM-as-judge, RAGAS or DeepEval
 - tracing and observability
 - Docker and cloud deployment
+- Azure Functions, Azure SDK familiarity, or Azure ML exposure
+- CI/CD workflows with GitHub Actions or Azure DevOps
 - MCP server design: tools, resources, and auth model
 - OAuth concepts and scoped access
+
+### Best Resources
+
+- Qdrant Quickstart + Docs: https://qdrant.tech/documentation/quickstart/
+- RAGAS Documentation: https://docs.ragas.io/
+- DeepEval Documentation: https://docs.confident-ai.com/
+- Docker Getting Started: https://docs.docker.com/get-started/
+- Microsoft Identity Platform OAuth Docs: https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow
+- Azure Machine Learning Documentation: https://learn.microsoft.com/en-us/azure/machine-learning/
+- GitHub Actions Documentation: https://docs.github.com/en/actions
+- Microsoft Learn MLOps Path: https://learn.microsoft.com/en-us/training/paths/build-first-machine-operations-workflow/
 
 ### Company-grade projects
 
@@ -158,10 +215,12 @@ You are ready to leave this stage when you can take a lead flow from form submis
    - a ticket summary tool
    - a customer knowledge resource
    - one safe write action with strict validation
+7. New Azure-aligned expectation:
+   Package one service for Azure-style deployment, or document the exact deployment path to Azure Functions, Azure Container Apps, or Azure ML endpoints.
 
 ### Stage exit standard
 
-You are ready to leave this stage when you can defend your retrieval choices, show evaluation results, deploy the app, and demonstrate a real MCP workflow that connects AI to external systems.
+You are ready to leave this stage when you can defend your retrieval choices, show evaluation results, run CI/CD, deploy the app, and demonstrate a real MCP workflow that connects AI to external systems.
 
 ---
 
@@ -177,6 +236,15 @@ You are ready to leave this stage when you can defend your retrieval choices, sh
 - document workflows and domain-specific extraction
 - operator dashboards and support workflows
 - solution demos, implementation notes, and post-deploy runbooks
+
+### Best Resources
+
+- pdfplumber Documentation: https://github.com/jsvine/pdfplumber
+- python-docx Documentation: https://python-docx.readthedocs.io/
+- Streamlit Get Started: https://docs.streamlit.io/get-started
+- Streamlit Documentation: https://docs.streamlit.io/
+- Azure Architecture Center: https://learn.microsoft.com/en-us/azure/architecture/
+- OpenAPI Specification: https://swagger.io/specification/
 
 ### Company-grade projects
 
@@ -211,6 +279,15 @@ You are ready to leave this stage when you can run a customer-style demo from pr
 - CI/CD, release readiness, and environment management
 - cost, latency, and quality comparisons across providers
 - stakeholder communication: demos, writeups, handoff docs, incident notes
+
+### Best Resources
+
+- Microsoft Certified: Azure Developer Associate: https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/
+- Azure Functions Documentation: https://learn.microsoft.com/en-us/azure/azure-functions/
+- Azure Machine Learning Prompt Flow: https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/
+- Streamlit Docker Deployment Guide: https://docs.streamlit.io/deploy/tutorials/docker
+- GitHub Actions Documentation: https://docs.github.com/en/actions
+- Docker Documentation: https://docs.docker.com/
 
 ### Company-grade projects
 
@@ -299,12 +376,13 @@ You should aim to reach at least `Strong` in every row and `Hireable` in Python/
 
 If you want the fastest improvement in job-fit, prioritize these in order:
 
-1. MCP server implementation
-2. React or Next.js operator UI
-3. OAuth and enterprise auth patterns
-4. CI/CD plus cloud deployment
-5. broader business integrations beyond HubSpot
-6. evals, tracing, and support documentation
+1. Python developer baseline: `requests`, `pandas`, Git, API scripting
+2. MCP server implementation
+3. React or Next.js operator UI
+4. OAuth and enterprise auth patterns
+5. CI/CD plus Azure-oriented deployment
+6. broader business integrations beyond HubSpot
+7. evals, tracing, and support documentation
 
 ---
 
@@ -370,6 +448,10 @@ Every session logged in `progress/daily-log.md`:
 ## Target Stack
 
 - Python
+- pandas
+- NumPy
+- scikit-learn
+- requests
 - FastAPI
 - React or Next.js
 - n8n and basic Make literacy
@@ -381,6 +463,7 @@ Every session logged in `progress/daily-log.md`:
 - Qdrant
 - Docker
 - CI/CD
+- Azure SDKs / Azure Functions / Azure ML familiarity
 - Cloud deployment
 - observability and evaluation tooling
 

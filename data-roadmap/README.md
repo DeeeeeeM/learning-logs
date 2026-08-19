@@ -76,6 +76,14 @@ Note: This is a progression roadmap, not an automatic title ladder. Real title r
 - writing findings in plain English
 - simple reusable scripts instead of manual repetition
 
+### Best Resources
+
+- Python Tutorial: https://docs.python.org/3/tutorial/
+- SQLBolt: https://sqlbolt.com/
+- pandas Getting Started: https://pandas.pydata.org/docs/getting_started/index.html
+- Microsoft Learn Data Analyst Career Path: https://learn.microsoft.com/en-us/training/career-paths/data-analyst
+- Power BI Learning on Microsoft Learn: https://learn.microsoft.com/en-us/training/powerplatform/power-bi
+
 ### Company-grade projects
 
 1. `phase-1-foundations/python/subtitle-analyzer/`
@@ -106,6 +114,14 @@ You are ready to leave this stage when you can take raw tabular data, clean it, 
 - advanced SQL: window functions, CTEs, subqueries
 - notebook-to-report discipline
 - turning findings into decisions and next actions
+
+### Best Resources
+
+- pandas User Guide: https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html
+- NumPy User Guide: https://numpy.org/doc/stable/user/
+- Kaggle Learn Pandas: https://www.kaggle.com/learn/pandas
+- scikit-learn Documentation: https://scikit-learn.org/
+- Microsoft Learn Data Analyst Career Path: https://learn.microsoft.com/en-us/training/career-paths/data-analyst
 
 ### Company-grade projects
 
@@ -138,6 +154,15 @@ You are ready to leave this stage when you can independently answer an ambiguous
 - dashboard data modeling and refresh design
 - versioned transformations and environment separation
 - basic cloud warehouse or local warehouse setup
+
+### Best Resources
+
+- dbt Learn / dbt Fundamentals: https://www.getdbt.com/dbt-learn
+- Apache Airflow Tutorials: https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html
+- Apache Airflow Documentation: https://airflow.apache.org/docs/
+- Great Expectations + dbt Tutorial: https://docs.greatexpectations.io/docs/reference/learn/integrations/dbt_tutorial/
+- Microsoft Learn Data Engineer on Azure: https://learn.microsoft.com/en-us/training/career-paths/data-engineer
+- Streamlit Documentation: https://docs.streamlit.io/
 
 ### Company-grade projects
 
@@ -172,6 +197,16 @@ You are ready to leave this stage when you can build a repeatable data pipeline 
 - evaluation approaches for ML and LLM systems
 - monitoring, retraining strategy, and governance documentation
 - Docker and cloud-adjacent deployment habits
+
+### Best Resources
+
+- scikit-learn User Guide: https://scikit-learn.org/stable/user_guide.html
+- PyTorch Learn the Basics: https://docs.pytorch.org/tutorials/beginner/basics/intro
+- MLflow Documentation: https://mlflow.org/docs/latest/
+- MLflow Getting Started for ML: https://mlflow.org/docs/latest/ml/getting-started/
+- Azure Machine Learning Documentation: https://learn.microsoft.com/en-us/azure/machine-learning/
+- Microsoft Learn Data Scientist Career Path: https://learn.microsoft.com/en-us/training/career-paths/data-scientist
+- Microsoft Learn MLOps Path: https://learn.microsoft.com/en-us/training/paths/build-first-machine-operations-workflow/
 
 ### Company-grade projects
 
