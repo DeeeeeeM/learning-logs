@@ -1,7 +1,39 @@
+Structured Query Language - Used to communicate with DBMS
+
 Database - Collection of organized data that can be easily accessed and managed.
 
 DBMS - We use this to talk to the DB instead of directly
 (SQL)
 
 Postgres - Instance of postgres can be carved to multiple database, Each app has databases.
+
+Tables:
+
+> Table represents a subject or event in an app
+> Table is made up of columns and rows
+> Each table represents a subject 
+> Each columnm represents a different attribute
+> Then each row represents different entry.
+> All tables can have relationships to other tables
+
+Postgres Datatypes
+
+Data type       Postgres                    Python
+Numeric         int, decimatl, precision    int, float
+Text            varchar, Text               string
+Bool            boolean                     boolean
+sequence        array                       list
+
+Primary key
+> A column or group of columns that uniquely identifies each row
+
+Tables can only have one primary key
+
+Unique constraints - makes sure every record is unique in that column
+
+Null Constraints - By default, adding a new entry can be blank, if its left blank, it will have null value
+
+Not Null constraint - This ensures column is never blank
+
+
 

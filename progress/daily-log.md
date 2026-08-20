@@ -1,3 +1,51 @@
+## 2026-08-20 · Week 14
+**Session:** AM
+**Hours:** 2
+**Mood:** 5/5  
+
+**Topics:** Diving deep into Postgres SQL
+
+**Built:** 
+Studied how to connect app to Postgres
+Changed the local array mock DB to PostgresDB
+Learned how PostgreSQL behaves  
+
+
+**Blockers:** 
+None
+
+## 2026-08-19 · Week 14
+**Session:** AM /PM
+**Hours:** 8
+**Mood:** 5/5  
+
+**Topics:** Restructured the learning phases / finished SQL tutorials / started Postgres SQL
+
+**Built:** 
+Strutured the phases to a study + project based learning to a job ready github portfolio
+Finished the remeaining SQL tutorials
+Started the introduction and SELECT queries in PostgreSQL
+
+**Blockers:** 
+None
+
+## 2026-08-14 · Week 13
+
+**Session:** PM
+**Hours:** 3
+**Mood:** 3/5  
+
+**Topics:** Login Logout API Practice Project
+
+**Built:** 
+Finished the Login Logout API project
+
+
+**Blockers:** 
+None
+
+---
+
 ## 2026-08-04 · Day 22 · Week 12
 
 **Session:** PM
