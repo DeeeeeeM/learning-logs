@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "13367ddb2ca7eb0f",
+        "id": "1cfd3b7238d602e0",
         "type": "tabs",
         "children": [
           {
-            "id": "bb7629bfe4a51d29",
+            "id": "8e4a0dfdc234a340",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "courses-certs/DICT Ethical Hacking/Ethical Hacking.md",
+                "file": "courses-certs/DICT Ethical Hacking/1. Module 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ethical Hacking"
+              "title": "1. Module 1"
             }
           }
         ]
@@ -185,8 +185,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "bb7629bfe4a51d29",
+  "active": "8e4a0dfdc234a340",
   "lastOpenFiles": [
+    "courses-certs/DICT Ethical Hacking/2. Module 2.md",
+    "courses-certs/DICT Ethical Hacking/3. Module 3.md",
+    "courses-certs/DICT Ethical Hacking/3.1 LAB 1 - Active Recon + CTF.md",
+    "courses-certs/DICT Ethical Hacking/1. Module 1.md",
     "bin/backendDevelopment/HeadFirstJava/chapter1.class",
     "bin/backendDevelopment/HeadFirstJava",
     "bin/backendDevelopment",
@@ -206,10 +210,8 @@
     "backendDevelopment/O'Reilly - Head First Object-Oriented Analysis & Design/Chapter 1",
     "backendDevelopment/HeadFirstJava/headfirstjava",
     "backendDevelopment/HeadFirstJava/chapter1.java",
-    "backendDevelopment/HeadFirstJava/chapter1.class",
     "ai-automation-engineering/progress/daily-log.md",
     "ai-automation-engineering/prio-study/Untitled.md",
-    "courses-certs/DICT Ethical Hacking/Ethical Hacking.md",
     "ai-automation-engineering/prio-study/README.md",
     "Pasted image 20260919124017.png",
     "Pasted image 20260919123631.png",
