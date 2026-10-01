@@ -1,0 +1,54 @@
+
+Active reconnaissance actual gathering of information which uses tools to send out probes to the target network to determine the posture of the system
+
+• Host enumeration • Network enumeration • User enumeration • Group enumeration • Network share enumeration • Web page enumeration • Application enumeration • Service enumeration • Packet crafting
+
+Passive Reconnaissance gathers info using tools that do not intereact with the target: 
+
+Third party DB
+
+Listening to the traffic of the network using intel to deduce info about the device communication on the network
+
+• Domain enumeration • Packet inspection • Open-source intelligence (OSINT) • Recon-ng • Eavesdropping
+
+DNS Lookups determine which entry and exit points exist, a cyber attacker needs to determine which of the target’s ports and protocols are exposed to the Internet.
+
+DNS lookups to determine the IP address or addresses used by h4cker.org and any other subdomains that might be in use.
+
+
+Identification of Technical and Administrative Contacts
+You can easily identify domain technical and administrative contacts by using the Whois tool.
+
+
+Cloud vs. Self-Hosted Applications and Related Subdomains
+whois command is used to retrieve the organization name (OrgName) of the owner for each of the IP addresses 3.230.129.93, 52.3.144.142, and 54.237.226.164
+
+Social Media Scraping
+• Attackers can easily gather valuable information about victims by scraping social media sites such as Twitter, LinkedIn, Facebook, and Instagram.
+• Attackers have also created job posts to attract people to apply for those positions. 
+• Then they interview their victims to try to get them to talk about what they do at work and the technologies used by their employer.
+
+Company Reputation and Security Posture
+
+• Attackers can leverage information from past security breaches that an organization might have experienced.
+
+Open-Source Intelligence (OSINT) Gathering
+Recon-ng
+Shodan
+
+**PORT SCAN**
+Three way handshake send three different packets
+A port scan is an active scan in which the scanning tool sends various types of probes to the target IP address and then examines the responses to determine whether the service is listening.
+
+Basically in a hotel room, a person will knock on each door of the floor and check who will answer or not.
+
+With an Nmap SYN scan, the tool sends a TCP SYN packet to the TCP port it is probing.
+
+• If the response is a SYN/ACK, this would indicate that the port is in a listening state.
+
+RST (reset), this would indicate that the port is closed
+
+• If the SYN probe does not receive any response, Nmap marks it as filtered
+
+
+
