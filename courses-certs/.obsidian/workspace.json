@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "a5fa125b09638d8b",
+    "type": "split",
+    "children": [
+      {
+        "id": "2281f1e964b18e3b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0746f8266721a2d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DICT Ethical Hacking/Module 3.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Module 3"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fbef25c2073c82c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "ef917714d7a04025",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "19ee1416b0dbe713",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "fbe1689f8b084f98",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6be128eb63a32744",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "b51b5129099ed8ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "b91e6bb23983c557",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "737e73f1db70584a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DICT Ethical Hacking/3.1 LAB 1 - Active Recon + CTF.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "f005b340fa886254",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DICT Ethical Hacking/3.1 LAB 1 - Active Recon + CTF.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "56b1c840c1351fbd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c850ec569fd2532a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "e65a12a8952b9b62",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DICT Ethical Hacking/3.1 LAB 1 - Active Recon + CTF.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "0746f8266721a2d9",
+  "lastOpenFiles": [
+    "DICT Ethical Hacking/Module 1 & 2.md",
+    "DICT Ethical Hacking/Module 2.md",
+    "DICT Ethical Hacking/Module 3.md",
+    "DICT Ethical Hacking/New Module.md",
+    "DICT Ethical Hacking/DICT Labs + CTF/CTF.md",
+    "Pasted image 20261006190000.png",
+    "DICT Ethical Hacking/DICT Labs + CTF/3.1 LAB 1 - Active Recon + CTF.md",
+    "DICT Ethical Hacking/DICT Labs + CTF",
+    "DICT Ethical Hacking/MODULE 2.md"
+  ]
+}

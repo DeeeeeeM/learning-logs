@@ -1,4 +1,3 @@
-
 Active reconnaissance actual gathering of information which uses tools to send out probes to the target network to determine the posture of the system
 
 • Host enumeration 
