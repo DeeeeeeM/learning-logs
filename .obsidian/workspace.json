@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1cfd3b7238d602e0",
+        "id": "0577f69dd367db4e",
         "type": "tabs",
         "children": [
           {
-            "id": "8e4a0dfdc234a340",
+            "id": "090d809922ccfd4e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "courses-certs/DICT Ethical Hacking/1. Module 1.md",
+                "file": "courses-certs/DICT Ethical Hacking/Module 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Module 1"
+              "title": "Module 3"
             }
           }
         ]
@@ -185,8 +185,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "8e4a0dfdc234a340",
+  "active": "090d809922ccfd4e",
   "lastOpenFiles": [
+    "courses-certs/DICT Ethical Hacking/New Module.md",
+    "courses-certs/DICT Ethical Hacking/Module 3.md",
+    "courses-certs/DICT Ethical Hacking/Module 1 & 2.md",
+    "courses-certs/DICT Ethical Hacking/DICT Labs + CTF/Active Recon + CTF.md",
+    "courses-certs/DICT Ethical Hacking/DICT Labs + CTF/CTF.md",
+    "courses-certs/DICT Ethical Hacking/Module 2.md",
+    "README.md",
+    "learning-notes/App Designs/ForgeSort API.md",
+    "2026-08-21.md",
+    "Pasted image 20260919124017.png",
+    "Pasted image 20260919123631.png",
     "courses-certs/DICT Ethical Hacking/2. Module 2.md",
     "courses-certs/DICT Ethical Hacking/3. Module 3.md",
     "courses-certs/DICT Ethical Hacking/3.1 LAB 1 - Active Recon + CTF.md",
@@ -195,13 +206,12 @@
     "bin/backendDevelopment/HeadFirstJava",
     "bin/backendDevelopment",
     "bin",
-    "learning-notes/API Notes/Request Body.md",
-    "learning-notes/API Notes/Query Parameters.md",
-    "learning-notes/API Notes/Path Parameters.md",
-    "learning-notes/API Notes/HTTP Intro.md",
-    "learning-notes/API Notes/Getting Started.md",
-    "learning-notes/App Designs/ForgeSort API.md",
-    "learning-notes/API Notes",
+    "ai-automation-engineering/phase-1-foundations/fast-api/API Notes/Request Body.md",
+    "ai-automation-engineering/phase-1-foundations/fast-api/API Notes/Query Parameters.md",
+    "ai-automation-engineering/phase-1-foundations/fast-api/API Notes/Path Parameters.md",
+    "ai-automation-engineering/phase-1-foundations/fast-api/API Notes/HTTP Intro.md",
+    "ai-automation-engineering/phase-1-foundations/fast-api/API Notes/Getting Started.md",
+    "ai-automation-engineering/phase-1-foundations/fast-api/API Notes",
     "learning-notes/App Designs",
     "learning-notes",
     "backendDevelopment/O'Reilly - Head First Object-Oriented Analysis & Design/Chapter 1/Untitled.md",
@@ -213,20 +223,12 @@
     "ai-automation-engineering/progress/daily-log.md",
     "ai-automation-engineering/prio-study/Untitled.md",
     "ai-automation-engineering/prio-study/README.md",
-    "Pasted image 20260919124017.png",
-    "Pasted image 20260919123631.png",
     "project-based-learning/learning-notes/Path Parameters.md",
     "project-based-learning/learning-notes/Getting Started.md",
-    "project-based-learning/learning-pathlib/learning-notes/Path Parameters.md",
-    "project-based-learning/learning-pathlib/learning-notes/Getting Started.md",
-    "learning-notes/Path Parameters.md",
-    "learning-notes/Getting Started.md",
     "Untitled 3.canvas",
     "Untitled 4.canvas",
-    "2026-08-21.md",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
-    "Untitled.canvas",
-    "ai-automation-engineering/README.md"
+    "Untitled.canvas"
   ]
 }
